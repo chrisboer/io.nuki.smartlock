@@ -268,12 +268,9 @@ function sendcommand(device_id, command, returndata, callback) {
 function polling(init) {
 	
 	if (init == 1) {
-	
 		//somehow the first time polling is called immediately, there are no devices yet.
-		setTimeout(polling, 5000);
-		
 	} else {
-		setTimeout(polling, 30000);
+		setTimeout(polling, 60000);
 		
 		Homey.log('_______________________________________________');
 		
